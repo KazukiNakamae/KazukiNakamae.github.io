@@ -5,9 +5,9 @@
   <subtitle>EYE FROM SUNRISE</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://username.github.io/"/>
+  <link href="https://KazukiNakamae.github.io/"/>
   <updated>2019-10-25T08:12:34.121Z</updated>
-  <id>https://username.github.io/</id>
+  <id>https://KazukiNakamae.github.io/</id>
   
   <author>
     <name>Kazuki Nakamae</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Launched</title>
-    <link href="https://username.github.io/2019/10/25/Launched/"/>
-    <id>https://username.github.io/2019/10/25/Launched/</id>
+    <link href="https://KazukiNakamae.github.io/2019/10/25/Launched/"/>
+    <id>https://KazukiNakamae.github.io/2019/10/25/Launched/</id>
     <published>2019-10-25T08:01:20.000Z</published>
     <updated>2019-10-25T08:12:34.121Z</updated>
     
@@ -36,10 +36,10 @@
     </summary>
     
     
-      <category term="others" scheme="https://username.github.io/categories/others/"/>
+      <category term="others" scheme="https://KazukiNakamae.github.io/categories/others/"/>
     
     
-      <category term="report" scheme="https://username.github.io/tags/report/"/>
+      <category term="report" scheme="https://KazukiNakamae.github.io/tags/report/"/>
     
   </entry>
   
