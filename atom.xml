@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>n|nja</title>
+  
+  <subtitle>EYE FROM SUNRISE</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://username.github.io/"/>
+  <updated>2019-10-25T08:12:34.121Z</updated>
+  <id>https://username.github.io/</id>
+  
+  <author>
+    <name>Kazuki Nakamae</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Launched</title>
+    <link href="https://username.github.io/2019/10/25/Launched/"/>
+    <id>https://username.github.io/2019/10/25/Launched/</id>
+    <published>2019-10-25T08:01:20.000Z</published>
+    <updated>2019-10-25T08:12:34.121Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi sir,</p><p>I opened “n|nja” just now. this website will upload reports of bioinformatics tools (mainly, about genome editing) and my hobby.</p><p>shitsurei shimashita…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi sir,&lt;/p&gt;
+&lt;p&gt;I opened “n|nja” just now. this website will upload reports of bioinformatics tools (mainly, about genome editing) and my 
+      
+    
+    </summary>
+    
+    
+      <category term="others" scheme="https://username.github.io/categories/others/"/>
+    
+    
+      <category term="report" scheme="https://username.github.io/tags/report/"/>
+    
+  </entry>
+  
+</feed>
