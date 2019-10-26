@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-10-25T08:12:34.121Z</updated>
+  <updated>2019-10-26T09:42:00.874Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>How to install Anaconda</title>
+    <link href="https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/"/>
+    <id>https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/</id>
+    <published>2019-10-26T08:42:18.000Z</published>
+    <updated>2019-10-26T09:42:00.874Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi sir,</p><p>Today, I introduce how to install Anaconda. What is Anaconda ? You can see <a href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)" title="Wikipedia" target="_blank" rel="noopener">Wikipedia</a>.</p><p>I am plannning to use it in many reports because Anaconda can create virtual environment.</p><p>The virtual environment could avoid to confictions of local environment (It is so important because we can save time to hear explanamtions of geeks, it’s exact, exact, complicated…).</p><p>Anyway, we simply introduce it.</p><p>1: Go to the <a href="https://www.anaconda.com/distribution/" title="Anaconda_Distribution" target="_blank" rel="noopener">Anaconda_Distribution</a>.</p><p>2: Scroll down untill you find the below botton.<br><img src="2019-10-26_1.png" alt="Installer"></p><p>3: Push “Download” botton (Either is good. I can recommend to install 3.7 version).</p><p>4: Lunch the downloaded file. It is installer of Anaconda.</p><p>5: Follow the instruction of the installer. When it asking you something, click “Continue” or “Agree”.</p><p>6: Lastly, click “Close”</p><p>It is done.</p><p>You can also check whetheer it was installed correctly.</p><p>(For Mac)</p><p>6: Open “Terminal.app” in “Applications” Folder (I call “Folder” “Directory” also…).</p><p>7: Type “conda”.</p><p>8: Push “Enter” button.</p><p>If you can see the long discription that start in “usage [-h] [-V] command …”, it is OK. Congratulations!!!</p><p>If not, omg…, you can browse other website to collect the information.<br>Of course, when you ask the question in the comment form, I will support it as long as I can.</p><p>Thank you so much…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi sir,&lt;/p&gt;
+&lt;p&gt;Today, I introduce how to install Anaconda. What is Anaconda ? You can see &lt;a href=&quot;https://en.wikipedia.org/wiki/Anaconda
+      
+    
+    </summary>
+    
+    
+      <category term="Installation" scheme="https://KazukiNakamae.github.io/categories/Installation/"/>
+    
+    
+      <category term="Bioinfomatics" scheme="https://KazukiNakamae.github.io/tags/Bioinfomatics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Launched</title>
     <link href="https://KazukiNakamae.github.io/2019/10/25/Launched/"/>
     <id>https://KazukiNakamae.github.io/2019/10/25/Launched/</id>
     <published>2019-10-25T08:01:20.000Z</published>
-    <updated>2019-10-25T08:12:34.121Z</updated>
+    <updated>2019-10-26T08:54:53.778Z</updated>
     
-    <content type="html"><![CDATA[<p>Hi sir,</p><p>I opened “n|nja” just now. this website will upload reports of bioinformatics tools (mainly, about genome editing) and my hobby.</p><p>shitsurei shimashita…</p>]]></content>
+    <content type="html"><![CDATA[<p>Hi sir,</p><p>I opened “n|nja” just now. this website will upload reports of bioinformatics tools (mainly, about genome editing) and my hobby.</p><p>Thank you so much…</p>]]></content>
     
     <summary type="html">
     
