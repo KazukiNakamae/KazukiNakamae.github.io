@@ -88,6 +88,68 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-How-to-trim-adapters-using-Trimmomatic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/28/How-to-trim-adapters-using-Trimmomatic/" class="article-date">
+  <time datetime="2019-10-28T11:13:39.000Z" itemprop="datePublished">2019-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NGS-Analysis/">NGS Analysis</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/28/How-to-trim-adapters-using-Trimmomatic/">How to trim adapters using Trimmomatic</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hi sir,<br>I am in a bad mood… I want to eat <a href="https://www.sirogohan.com/recipe/yasaizousui/" title="Japanese egg oatmeal" target="_blank" rel="noopener">Japanese egg oatmeal</a> to get a good night’s sleep.</p>
+<p>Today, I introduce how to trim adapters using Trimmomatic.</p>
+<p>To be honest, I cannot force you to do it because we can map NGS data without trimming adapters.</p>
+<p>But, <a href="https://www.ecseq.com/support/ngs/trimming-adapter-sequences-is-it-necessary" title="Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">this article</a> and <a href="https://www.biostars.org/p/212136/" title="Forum: Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">discussion in Biosters</a> are interesting. Let see it.</p>
+<p>Anyway, I will put a simple example of trimming adapters using Trimmomatic using the published amplicon sequencing data.</p>
+<h3 id="STEP1-Creating-a-visual-environment"><a href="#STEP1-Creating-a-visual-environment" class="headerlink" title="STEP1: Creating a visual environment"></a>STEP1: Creating a visual environment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create --name trimmomatic_env;</span><br><span class="line"><span class="built_in">source</span> activate trimmomatic_env;</span><br><span class="line"></span><br><span class="line">conda config --add channels bioconda;</span><br><span class="line">conda install --channel bioconda sra-tools trimmomatic;</span><br><span class="line">conda config --remove channels bioconda;</span><br></pre></td></tr></table></figure>
+
+<h3 id="STEP2-Downloading-the-example-data"><a href="#STEP2-Downloading-the-example-data" class="headerlink" title="STEP2: Downloading the example data."></a>STEP2: Downloading the example data.</h3><p>*In this example, I use published amplicon sequence data. If you have your FASTQ files, skip this section.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastq-dump DRR147084 --split-files --gzip --outdir /Volumes/databank1/ngs; <span class="comment"># Download from SRR(DRR)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="STEP3-Preparing-the-adapter-sequences"><a href="#STEP3-Preparing-the-adapter-sequences" class="headerlink" title="STEP3: Preparing the adapter sequences"></a>STEP3: Preparing the adapter sequences</h3><p>You have to get FASTA sequences of adapters to use Trimmomatic. Please check the <a href="http://www.usadellab.org/cms/?page=trimmomatic" title="USADELLAB.org" target="_blank" rel="noopener">Authors Page</a>.<br>According to that, <a href="https://github.com/timflutre/trimmomatic/blob/master/adapters/TruSeq3-PE.fa" title="TruSeq3-PE.fa" target="_blank" rel="noopener">TruSeq3-PE.fa</a> is used in the MiSeq machine which made the sequence data of the example data.</p>
+<p>Download the Trimmomatic data from <a href="https://github.com/timflutre/trimmomatic/tree/master/adapters" title="trimmomatic/adapters/" target="_blank" rel="noopener">GitHub</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/timflutre/trimmomatic /Volumes/databank1/ngs/trimmomatic;</span><br></pre></td></tr></table></figure>
+
+<p>“TruSeq3-PE.fa” exists in <code>/Volumes/databank1/ngs/trimmomatic/adapters/</code>.</p>
+<h3 id="STEP4-Executing-Trimmomatic-to-trim-the-adapters"><a href="#STEP4-Executing-Trimmomatic-to-trim-the-adapters" class="headerlink" title="STEP4: Executing Trimmomatic to trim the adapters"></a>STEP4: Executing Trimmomatic to trim the adapters</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">trimmomatic PE -phred33 \</span><br><span class="line">-trimlog log.txt /Volumes/databank1/ngs/DRR147084_1.fastq.gz /Volumes/databank1/ngs/DRR147084_2.fastq.gz \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_1.fq /Volumes/databank1/ngs/unpaired_DRR147084_1.fq \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_2.fq /Volumes/databank1/ngs/unpaired_DRR147084_2.fq \</span><br><span class="line">ILLUMINACLIP:/Volumes/databank1/ngs/trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 \</span><br><span class="line">LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:36;</span><br></pre></td></tr></table></figure>
+
+<p>“paired_DRR147084_1.fq”, “paired_DRR147084_2.fq” are the trimmed FASTQ.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/" data-id="ck2acna520001cwv1g0s1mlcm" class="article-share-link">Share</a>
+      
+        <a href="https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SRA/">SRA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trimmomatic/">Trimmomatic</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-How-to-map-NGS-data-using-BWAMEM" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" class="article-date">
@@ -184,12 +246,12 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" data-id="ck28mbo5g0001e9v1n06tw5t4" class="article-share-link">Share</a>
+      <a data-url="https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" data-id="ck2acna5j0004cwv1nle4w14e" class="article-share-link">Share</a>
       
         <a href="https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BWA-MEM/">BWA-MEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BWA-MEM/">BWA-MEM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FLASh/">FLASh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SRA/">SRA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sickle/">Sickle</a></li></ul>
 
     </footer>
   </div>
@@ -249,7 +311,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/" data-id="ck28mbo590000e9v1p67tvetw" class="article-share-link">Share</a>
+      <a data-url="https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/" data-id="ck2acna4k0000cwv1pvu2hl1y" class="article-share-link">Share</a>
       
         <a href="https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -296,7 +358,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://KazukiNakamae.github.io/2019/10/25/Launched/" data-id="ck28mbo5l0004e9v1q9cue54k" class="article-share-link">Share</a>
+      <a data-url="https://KazukiNakamae.github.io/2019/10/25/Launched/" data-id="ck2acna5q0005cwv1ng746aav" class="article-share-link">Share</a>
       
         <a href="https://KazukiNakamae.github.io/2019/10/25/Launched/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -330,7 +392,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BWA-MEM/">BWA-MEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/report/">report</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BWA-MEM/">BWA-MEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FLASh/">FLASh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SRA/">SRA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sickle/">Sickle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trimmomatic/">Trimmomatic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/report/">report</a></li></ul>
     </div>
   </div>
 
@@ -340,7 +402,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/BWA-MEM/" style="font-size: 10px;">BWA-MEM</a> <a href="/tags/Bioinfomatics/" style="font-size: 20px;">Bioinfomatics</a> <a href="/tags/report/" style="font-size: 10px;">report</a>
+      <a href="/tags/Anaconda/" style="font-size: 15px;">Anaconda</a> <a href="/tags/BWA-MEM/" style="font-size: 10px;">BWA-MEM</a> <a href="/tags/Bioinfomatics/" style="font-size: 20px;">Bioinfomatics</a> <a href="/tags/FLASh/" style="font-size: 10px;">FLASh</a> <a href="/tags/SRA/" style="font-size: 15px;">SRA</a> <a href="/tags/Sickle/" style="font-size: 10px;">Sickle</a> <a href="/tags/Trimmomatic/" style="font-size: 10px;">Trimmomatic</a> <a href="/tags/report/" style="font-size: 10px;">report</a>
     </div>
   </div>
 
@@ -360,6 +422,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/10/28/How-to-trim-adapters-using-Trimmomatic/">How to trim adapters using Trimmomatic</a>
+          </li>
         
           <li>
             <a href="/2019/10/27/How-to-map-NGS-data-using-BWAMEM/">How to map NGS data using BWA-MEM</a>
