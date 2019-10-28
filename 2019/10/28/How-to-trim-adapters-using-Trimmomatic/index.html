@@ -28,7 +28,7 @@ ga('send', 'pageview');
 <meta property="og:site_name" content="n|nja">
 <meta property="og:description" content="Hi sir,I am in a bad mood… I want to eat Japanese egg oatmeal to get a good night’s sleep. Today, I introduce how to trim adapters using Trimmomatic. To be honest, I cannot force you to do it because">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T11:38:33.275Z">
+<meta property="og:updated_time" content="2019-10-28T11:43:33.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to trim adapters using Trimmomatic">
 <meta name="twitter:description" content="Hi sir,I am in a bad mood… I want to eat Japanese egg oatmeal to get a good night’s sleep. Today, I introduce how to trim adapters using Trimmomatic. To be honest, I cannot force you to do it because">
@@ -123,14 +123,14 @@ ga('send', 'pageview');
 <h3 id="STEP2-Downloading-the-example-data"><a href="#STEP2-Downloading-the-example-data" class="headerlink" title="STEP2: Downloading the example data."></a>STEP2: Downloading the example data.</h3><p>*In this example, I use published amplicon sequence data. If you have your FASTQ files, skip this section.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastq-dump DRR147084 --split-files --gzip --outdir /Volumes/databank1/ngs; <span class="comment"># Download from SRR(DRR)</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="STEP3-Preparing-the-adapter-sequences"><a href="#STEP3-Preparing-the-adapter-sequences" class="headerlink" title="STEP3: Preparing the adapter sequences"></a>STEP3: Preparing the adapter sequences</h3><p>You have to get FASTA sequences of adapters to use Trimmomatic. Please check the <a href="http://www.usadellab.org/cms/?page=trimmomatic" title="USADELLAB.org" target="_blank" rel="noopener">Authors Page</a>.<br>According to that, <a href="https://github.com/timflutre/trimmomatic/blob/master/adapters/TruSeq3-PE.fa" title="TruSeq3-PE.fa" target="_blank" rel="noopener">TruSeq3-PE.fa</a> is used in the MiSeq machine which made the sequence data of the example data.</p>
+<h3 id="STEP3-Preparing-the-adapter-sequences"><a href="#STEP3-Preparing-the-adapter-sequences" class="headerlink" title="STEP3: Preparing the adapter sequences"></a>STEP3: Preparing the adapter sequences</h3><p>You have to get FASTA sequences of adapters to use Trimmomatic. Please check the <a href="http://www.usadellab.org/cms/?page=trimmomatic" title="USADELLAB.org" target="_blank" rel="noopener">Authors Page</a>.<br>According to that, <a href="https://github.com/timflutre/trimmomatic/blob/master/adapters/TruSeq3-PE.fa" title="TruSeq3-PE.fa" target="_blank" rel="noopener">TruSeq3-PE.fa</a> is used in the MiSeq machine which performed sequencing the example data.</p>
 <p>Download the Trimmomatic data from <a href="https://github.com/timflutre/trimmomatic/tree/master/adapters" title="trimmomatic/adapters/" target="_blank" rel="noopener">GitHub</a>.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/timflutre/trimmomatic /Volumes/databank1/ngs/trimmomatic;</span><br></pre></td></tr></table></figure>
 
 <p>“TruSeq3-PE.fa” exists in <code>/Volumes/databank1/ngs/trimmomatic/adapters/</code>.</p>
 <h3 id="STEP4-Executing-Trimmomatic-to-trim-the-adapters"><a href="#STEP4-Executing-Trimmomatic-to-trim-the-adapters" class="headerlink" title="STEP4: Executing Trimmomatic to trim the adapters"></a>STEP4: Executing Trimmomatic to trim the adapters</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">trimmomatic PE -phred33 \</span><br><span class="line">-trimlog log.txt /Volumes/databank1/ngs/DRR147084_1.fastq.gz /Volumes/databank1/ngs/DRR147084_2.fastq.gz \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_1.fq /Volumes/databank1/ngs/unpaired_DRR147084_1.fq \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_2.fq /Volumes/databank1/ngs/unpaired_DRR147084_2.fq \</span><br><span class="line">ILLUMINACLIP:/Volumes/databank1/ngs/trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 \</span><br><span class="line">LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:36;</span><br></pre></td></tr></table></figure>
 
-<p>“paired_DRR147084_1.fq”, “paired_DRR147084_2.fq” are the trimmed FASTQ.</p>
+<p>“paired_DRR147084_1.fq”, “paired_DRR147084_2.fq” are the trimmed FASTQ files.</p>
 
       
     </div>
