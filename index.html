@@ -118,7 +118,7 @@ ga('send', 'pageview');
 <p>Today, I introduce how to trim adapters using Trimmomatic.</p>
 <p>To be honest, I cannot force you to do it because we can map NGS data without trimming adapters.</p>
 <p>But, <a href="https://www.ecseq.com/support/ngs/trimming-adapter-sequences-is-it-necessary" title="Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">this article</a> and <a href="https://www.biostars.org/p/212136/" title="Forum: Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">discussion in Biosters</a> are interesting. Let see it.</p>
-<p>Anyway, I will put a simple example of trimming adapters using Trimmomatic using the published amplicon sequencing data.</p>
+<p>Anyway, I will put a simple example of trimming adapters using Trimmomatic and the published amplicon sequencing data.</p>
 <h3 id="STEP1-Creating-a-visual-environment"><a href="#STEP1-Creating-a-visual-environment" class="headerlink" title="STEP1: Creating a visual environment"></a>STEP1: Creating a visual environment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create --name trimmomatic_env;</span><br><span class="line"><span class="built_in">source</span> activate trimmomatic_env;</span><br><span class="line"></span><br><span class="line">conda config --add channels bioconda;</span><br><span class="line">conda install --channel bioconda sra-tools trimmomatic;</span><br><span class="line">conda config --remove channels bioconda;</span><br></pre></td></tr></table></figure>
 
 <h3 id="STEP2-Downloading-the-example-data"><a href="#STEP2-Downloading-the-example-data" class="headerlink" title="STEP2: Downloading the example data."></a>STEP2: Downloading the example data.</h3><p>*In this example, I use published amplicon sequence data. If you have your FASTQ files, skip this section.</p>
@@ -455,8 +455,8 @@ ga('send', 'pageview');
       <script type="text/javascript">
           var disqus_shortname = 'kazukinakamae-com';
           var disqus_config = function () {
-              this.page.url = 'https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
-              this.page.identifier = '/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
+              this.page.url = 'https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/';
+              this.page.identifier = '/2019/10/28/How-to-trim-adapters-using-Trimmomatic/';
               this.language = 'en';
           };
           (function(){
