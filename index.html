@@ -117,7 +117,7 @@ ga('send', 'pageview');
         <p>Hi sir,<br>Winter is comming. I am thinking about setting <a href="https://en.wikipedia.org/wiki/Kotatsu" title="kotatsu" target="_blank" rel="noopener">kotatsu</a>.</p>
 <p>Today, I introduce how to analyze CRISPR-Cas9 sample using CrispRVariants.<br>In previous posts, I introduced <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">how to map NGS data using BWA-MEM</a>. I will use this bam file to introduce it. If you have not seen it, you can check <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">the post</a> before.</p>
 <p>I will show an alignment map of the region indicated as the following “focusing_range” in the wildtype amplicon sequence.</p>
-<p><img src="/images/2019-11-7_1.png" alt="Whole sequence of amplicon" title="Whole sequence of amplicon"><br><img src="/images/2019-11-7_2.png" alt="Focusing range" title="focusing range"></p>
+<p><img src="/images/2019-11-6_1.png" alt="Whole sequence of amplicon" title="Whole sequence of amplicon"><br><img src="/images/2019-11-6_2.png" alt="Focusing range" title="focusing range"></p>
 <p>OK, I will put a simple example…</p>
 <h3 id="STEP1-Searching-the-region-of-“focusing-range”-using-Blat"><a href="#STEP1-Searching-the-region-of-“focusing-range”-using-Blat" class="headerlink" title="STEP1: Searching the region of “focusing_range” using Blat"></a>STEP1: Searching the region of “focusing_range” using Blat</h3><h4 id="1-Create-visual-environment"><a href="#1-Create-visual-environment" class="headerlink" title="1: Create visual environment"></a>1: Create visual environment</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name blat_env --channel bioconda blat;</span><br></pre></td></tr></table></figure>
 
@@ -135,7 +135,7 @@ ga('send', 'pageview');
 <h4 id="5-Make-tsv-file-to-open-the-result-of-blat-focusing-range-fa-psl"><a href="#5-Make-tsv-file-to-open-the-result-of-blat-focusing-range-fa-psl" class="headerlink" title="5: Make tsv file to open the result of blat (focusing_range.fa.psl)"></a>5: Make tsv file to open the result of blat (focusing_range.fa.psl)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /Volumes/databank1/ngs/focusing_range.fa.psl /Volumes/databank1/ngs/focusing_range.fa.psl.tsv;</span><br></pre></td></tr></table></figure>
 
 <p>Open /Volumes/databank1/ngs/focusing_range.fa.psl.tsv using Excel or the other spreadsheet.<br>You have to memorilize the value of highlighted cells (strand : - / T name : chr12 / T start : 56638284 / T end : 56638364)</p>
-<p><img src="/images/2019-11-7_3.png" alt="Result of Blat" title="Result of Blat"></p>
+<p><img src="/images/2019-11-6_3.png" alt="Result of Blat" title="Result of Blat"></p>
 <h3 id="STEP2-Install-CrispRVariants-using-RStudio"><a href="#STEP2-Install-CrispRVariants-using-RStudio" class="headerlink" title="STEP2: Install CrispRVariants using RStudio."></a>STEP2: Install CrispRVariants using RStudio.</h3><p>CrispRVariants sometimes fails to be install now (at 2019/11/07). Especially, Anaconda version is unstable. I hope that it will be improved.<br>Anyway, to install CrispRVariants, you can do the following procedure in video. It is important to type <code>no</code> when the RStudio asked you <code>Do you want to install from sources the packages which need compilation? (Yes/no/cancel)</code>.</p>
 <div class="video-container"><iframe src="//www.youtube.com/embed/n0K8tPFsJRA" frameborder="0" allowfullscreen></iframe></div>
 
@@ -167,7 +167,7 @@ ga('send', 'pageview');
 
 <h4 id="16-Create-alignment-map"><a href="#16-Create-alignment-map" class="headerlink" title="16: Create alignment map"></a>16: Create alignment map</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plotVariants(crispr.set)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/2019-11-7_4.png" alt="Alignment map" title="Alignment map"></p>
+<p><img src="/images/2019-11-6_4.png" alt="Alignment map" title="Alignment map"></p>
 <h4 id="17-Estimate-the-editing-efficiency"><a href="#17-Estimate-the-editing-efficiency" class="headerlink" title="17: Estimate the editing efficiency"></a>17: Estimate the editing efficiency</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mutationEfficiency(crispr.set)</span><br></pre></td></tr></table></figure>
 
 <p>output</p>
@@ -192,7 +192,7 @@ ga('send', 'pageview');
 
 <h4 id="20-Create-barplot-of-variants-classification-by-size"><a href="#20-Create-barplot-of-variants-classification-by-size" class="headerlink" title="20: Create barplot of variants classification by size"></a>20: Create barplot of variants classification by size</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barplotAlleleFreqs(variantCounts(crispr.set))</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/2019-11-7_5.png" alt="Alignment map" title="Alignment map"></p>
+<p><img src="/images/2019-11-6_5.png" alt="Alignment map" title="Alignment map"></p>
 <p>This is a simple example. You can change the procedure.</p>
 <h5 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h5><p>Hardware</p>
 <ul>
