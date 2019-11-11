@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-11-06T18:49:58.529Z</updated>
+  <updated>2019-11-11T13:33:59.481Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer</title>
+    <link href="https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/"/>
+    <id>https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/</id>
+    <published>2019-11-07T06:18:13.000Z</published>
+    <updated>2019-11-11T13:33:59.481Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi sir,<br>I have a headache. I took <a href="https://en.wikipedia.org/wiki/Pocari_Sweat" title="Pocari Sweat" target="_blank" rel="noopener">Pocari Sweat</a> and the medicine. I wish to be better…</p><p>Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing knock-out.knock-in data generated with CRISPR.</p><p>I use the published filtered NGS amplicon data (qfltr_DRR147084_1.fastq / qfltr_DRR147084_2.fastq) which was generated in the step 6 of <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="How to map NGS data using BWA-MEM">the post</a></p><p>The data is a knock-in sample of ATP5B locus in a human cell according to <a href="https://www.nature.com/articles/s41467-018-05773-6" title="How to map NGS data using BWA-MEM" target="_blank" rel="noopener">the paper</a>. You can see the sequence infromation in the “Methods” block.</p><p>We show the analysis example. Please watch the following video.</p><div class="video-container"><iframe src="//www.youtube.com/embed/wB4OUgbtvnc" frameborder="0" allowfullscreen></iframe></div><p>Donor sequence is optional parameter. If you analize knock-out data, the information is not required.</p><p>Thank you so much…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi sir,&lt;br&gt;I have a headache. I took &lt;a href=&quot;https://en.wikipedia.org/wiki/Pocari_Sweat&quot; title=&quot;Pocari Sweat&quot; target=&quot;_blank&quot; rel=&quot;noope
+      
+    
+    </summary>
+    
+    
+      <category term="NGS Analysis" scheme="https://KazukiNakamae.github.io/categories/NGS-Analysis/"/>
+    
+    
+      <category term="Bioinfomatics" scheme="https://KazukiNakamae.github.io/tags/Bioinfomatics/"/>
+    
+      <category term="Cas-Analyzer" scheme="https://KazukiNakamae.github.io/tags/Cas-Analyzer/"/>
+    
+  </entry>
   
   <entry>
     <title>How to analyze CRISPR-Cas9 sample using CrispRVariants</title>
