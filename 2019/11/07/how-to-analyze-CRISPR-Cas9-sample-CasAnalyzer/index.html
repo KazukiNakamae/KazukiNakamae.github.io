@@ -20,18 +20,18 @@ ga('send', 'pageview');
   
   <title>How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer | n|nja</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing k">
+  <meta name="description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce [Cas-analyzer](http://www.rgenome.net/cas-analyzer/#! Cas-analyzer) which is a web-based">
 <meta name="keywords" content="Bioinfomatics,Cas-Analyzer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer">
 <meta property="og:url" content="https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/index.html">
 <meta property="og:site_name" content="n|nja">
-<meta property="og:description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing k">
+<meta property="og:description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce [Cas-analyzer](http://www.rgenome.net/cas-analyzer/#! Cas-analyzer) which is a web-based">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T13:33:59.481Z">
+<meta property="og:updated_time" content="2019-11-11T13:51:25.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer">
-<meta name="twitter:description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing k">
+<meta name="twitter:description" content="Hi sir,I have a headache. I took Pocari Sweat and the medicine. I wish to be better… Anyway, today, I introduce [Cas-analyzer](http://www.rgenome.net/cas-analyzer/#! Cas-analyzer) which is a web-based">
 <meta name="twitter:creator" content="@kazuki_nakamae">
   
     <link rel="alternate" href="/atom.xml" title="n|nja" type="application/atom+xml">
@@ -114,7 +114,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Hi sir,<br>I have a headache. I took <a href="https://en.wikipedia.org/wiki/Pocari_Sweat" title="Pocari Sweat" target="_blank" rel="noopener">Pocari Sweat</a> and the medicine. I wish to be better…</p>
-<p>Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing knock-out.knock-in data generated with CRISPR.</p>
+<p>Anyway, today, I introduce [Cas-analyzer](<a href="http://www.rgenome.net/cas-analyzer/#" target="_blank" rel="noopener">http://www.rgenome.net/cas-analyzer/#</a>! Cas-analyzer) which is a web-based NGS analysis tool. This is specialized for analyzing knock-out/knock-in data generated with CRISPR.<br>*Citation info: [Park J. et al. Cas-Analyzer: an online tool for assessing genome editing results using NGS data. Bioinformatics 33, 286-288 (2017)](<a href="https://doi.org/10.1093/bioinformatics/btw561" target="_blank" rel="noopener">https://doi.org/10.1093/bioinformatics/btw561</a> Cas-Analyzer).</p>
 <p>I use the published filtered NGS amplicon data (qfltr_DRR147084_1.fastq / qfltr_DRR147084_2.fastq) which was generated in the step 6 of <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="How to map NGS data using BWA-MEM">the post</a></p>
 <p>The data is a knock-in sample of ATP5B locus in a human cell according to <a href="https://www.nature.com/articles/s41467-018-05773-6" title="How to map NGS data using BWA-MEM" target="_blank" rel="noopener">the paper</a>. You can see the sequence infromation in the “Methods” block.</p>
 <p>We show the analysis example. Please watch the following video.</p>
@@ -122,6 +122,7 @@ ga('send', 'pageview');
 
 
 <p>Donor sequence is optional parameter. If you analize knock-out data, the information is not required.</p>
+<p>As I showed the result in this video, indel frequency is 61.0%. CrispRVariants showed that mutation efficiency is 61.37% in <a href="https://kazukinakamae.github.io/2019/11/07/how-to-map-CRISPR-Cas9-sample-CrispRVariants/" title="pastpost">the past post</a>.<br>I feel that the algorithm of Cas-Analyzer is quite simple, but it is effective.</p>
 <p>Thank you so much…</p>
 
       
@@ -247,8 +248,8 @@ ga('send', 'pageview');
       <script type="text/javascript">
           var disqus_shortname = 'kazukinakamae-com';
           var disqus_config = function () {
-              this.page.url = 'https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
-              this.page.identifier = '/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
+              this.page.url = 'https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/';
+              this.page.identifier = '/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/';
               this.language = 'en';
           };
           (function(){

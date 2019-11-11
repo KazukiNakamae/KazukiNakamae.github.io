@@ -115,7 +115,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Hi sir,<br>I have a headache. I took <a href="https://en.wikipedia.org/wiki/Pocari_Sweat" title="Pocari Sweat" target="_blank" rel="noopener">Pocari Sweat</a> and the medicine. I wish to be better…</p>
-<p>Anyway, today, I introduce Cas-analyzer which is a web-based NGS analysis tool. This is specialized for analyzing knock-out.knock-in data generated with CRISPR.</p>
+<p>Anyway, today, I introduce [Cas-analyzer](<a href="http://www.rgenome.net/cas-analyzer/#" target="_blank" rel="noopener">http://www.rgenome.net/cas-analyzer/#</a>! Cas-analyzer) which is a web-based NGS analysis tool. This is specialized for analyzing knock-out/knock-in data generated with CRISPR.<br>*Citation info: [Park J. et al. Cas-Analyzer: an online tool for assessing genome editing results using NGS data. Bioinformatics 33, 286-288 (2017)](<a href="https://doi.org/10.1093/bioinformatics/btw561" target="_blank" rel="noopener">https://doi.org/10.1093/bioinformatics/btw561</a> Cas-Analyzer).</p>
 <p>I use the published filtered NGS amplicon data (qfltr_DRR147084_1.fastq / qfltr_DRR147084_2.fastq) which was generated in the step 6 of <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="How to map NGS data using BWA-MEM">the post</a></p>
 <p>The data is a knock-in sample of ATP5B locus in a human cell according to <a href="https://www.nature.com/articles/s41467-018-05773-6" title="How to map NGS data using BWA-MEM" target="_blank" rel="noopener">the paper</a>. You can see the sequence infromation in the “Methods” block.</p>
 <p>We show the analysis example. Please watch the following video.</p>
@@ -123,6 +123,7 @@ ga('send', 'pageview');
 
 
 <p>Donor sequence is optional parameter. If you analize knock-out data, the information is not required.</p>
+<p>As I showed the result in this video, indel frequency is 61.0%. CrispRVariants showed that mutation efficiency is 61.37% in <a href="https://kazukinakamae.github.io/2019/11/07/how-to-map-CRISPR-Cas9-sample-CrispRVariants/" title="pastpost">the past post</a>.<br>I feel that the algorithm of Cas-Analyzer is quite simple, but it is effective.</p>
 <p>Thank you so much…</p>
 
       
@@ -169,7 +170,8 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Hi sir,<br>Winter is comming. I am thinking about setting <a href="https://en.wikipedia.org/wiki/Kotatsu" title="kotatsu" target="_blank" rel="noopener">kotatsu</a>.</p>
-<p>Today, I introduce how to analyze CRISPR-Cas9 sample using CrispRVariants.<br>In previous posts, I introduced <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">how to map NGS data using BWA-MEM</a>. I will use this bam file to introduce it. If you have not seen it, you can check <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">the post</a> before.</p>
+<p>Today, I introduce how to analyze CRISPR-Cas9 sample using [CrispRVariants](<a href="https://bioconductor.org/packages/release/bioc/html/CrispRVariants.html" target="_blank" rel="noopener">https://bioconductor.org/packages/release/bioc/html/CrispRVariants.html</a> CrispRVariants). which is a accurate NGS analysis tool. This is specialized for analyzing genome editing data.<br>*Citation info: [Lindsay, Helen, et al. “CrispRVariants charts the mutation spectrum of genome engineering experiments.” Nature biotechnology 34.7 (2016): 701.](<a href="https://www.nature.com/nbt/journal/v34/n7/full/nbt.3628.html" target="_blank" rel="noopener">https://www.nature.com/nbt/journal/v34/n7/full/nbt.3628.html</a> CrispRVariants).</p>
+<p>In previous posts, I introduced <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">how to map NGS data using BWA-MEM</a>. I will use this bam file to introduce it. If you have not seen it, you can check <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="how to map NGS data using BWA-MEM">the post</a> before.</p>
 <p>I will show an alignment map of the region indicated as the following “focusing_range” in the wildtype amplicon sequence.</p>
 <p><img src="/images/2019-11-6_1.png" alt="Whole sequence of amplicon" title="Whole sequence of amplicon"><br><img src="/images/2019-11-6_2.png" alt="Focusing range" title="focusing range"></p>
 <p>OK, I will put a simple example…</p>
@@ -319,8 +321,8 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Hi sir,<br>I am in a bad mood… I want to eat <a href="https://www.sirogohan.com/recipe/yasaizousui/" title="Japanese egg oatmeal" target="_blank" rel="noopener">Japanese egg oatmeal</a> to get a good night’s sleep.</p>
-<p>Today, I introduce how to trim adapters using Trimmomatic.</p>
-<p>To be honest, I cannot force you to do it because we can map NGS data without trimming adapters.</p>
+<p>Today, I introduce how to trim adapters using Trimmomatic.<br>*[Bolger, A. M., Lohse, M., &amp; Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.](<a href="https://academic.oup.com/bioinformatics/article/30/15/2114/2390096" target="_blank" rel="noopener">https://academic.oup.com/bioinformatics/article/30/15/2114/2390096</a> Trimmomatic Trimmomatic)</p>
+<p>Honestly, I cannot force you to do it because we can map NGS data without trimming adapters.</p>
 <p>But, <a href="https://www.ecseq.com/support/ngs/trimming-adapter-sequences-is-it-necessary" title="Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">this article</a> and <a href="https://www.biostars.org/p/212136/" title="Forum: Trimming adapter sequences - is it necessary?" target="_blank" rel="noopener">discussion in Biosters</a> are interesting. Let see it.</p>
 <p>Anyway, I will put a simple example of trimming adapters using Trimmomatic and the published amplicon sequencing data.</p>
 <h3 id="STEP1-Creating-a-visual-environment"><a href="#STEP1-Creating-a-visual-environment" class="headerlink" title="STEP1: Creating a visual environment"></a>STEP1: Creating a visual environment</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create --name trimmomatic_env;</span><br><span class="line"><span class="built_in">source</span> activate trimmomatic_env;</span><br><span class="line"></span><br><span class="line">conda config --add channels bioconda;</span><br><span class="line">conda install --channel bioconda sra-tools trimmomatic;</span><br><span class="line">conda config --remove channels bioconda;</span><br></pre></td></tr></table></figure>
@@ -336,6 +338,7 @@ ga('send', 'pageview');
 <h3 id="STEP4-Executing-Trimmomatic-to-trim-the-adapters"><a href="#STEP4-Executing-Trimmomatic-to-trim-the-adapters" class="headerlink" title="STEP4: Executing Trimmomatic to trim the adapters"></a>STEP4: Executing Trimmomatic to trim the adapters</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">trimmomatic PE -phred33 \</span><br><span class="line">-trimlog log.txt /Volumes/databank1/ngs/DRR147084_1.fastq.gz /Volumes/databank1/ngs/DRR147084_2.fastq.gz \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_1.fq /Volumes/databank1/ngs/unpaired_DRR147084_1.fq \</span><br><span class="line">/Volumes/databank1/ngs/paired_DRR147084_2.fq /Volumes/databank1/ngs/unpaired_DRR147084_2.fq \</span><br><span class="line">ILLUMINACLIP:/Volumes/databank1/ngs/trimmomatic/adapters/TruSeq3-PE.fa:2:30:10 \</span><br><span class="line">LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:36;</span><br></pre></td></tr></table></figure>
 
 <p>“paired_DRR147084_1.fq”, “paired_DRR147084_2.fq” are the trimmed FASTQ files.</p>
+<p>Thank you so much…</p>
 
       
     </div>
@@ -663,8 +666,8 @@ ga('send', 'pageview');
       <script type="text/javascript">
           var disqus_shortname = 'kazukinakamae-com';
           var disqus_config = function () {
-              this.page.url = 'https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
-              this.page.identifier = '/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
+              this.page.url = 'https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/';
+              this.page.identifier = '/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/';
               this.language = 'en';
           };
           (function(){
