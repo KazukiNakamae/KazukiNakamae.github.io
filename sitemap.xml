@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/</loc>
-    
-    <lastmod>2019-11-11T13:52:06.963Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/</loc>
     
-    <lastmod>2019-11-11T13:45:23.008Z</lastmod>
+    <lastmod>2019-11-11T13:54:03.573Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/07/how-to-map-CRISPR-Cas9-sample-CrispRVariants/</loc>
     
-    <lastmod>2019-11-11T13:41:32.450Z</lastmod>
+    <lastmod>2019-11-11T13:53:53.905Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/</loc>
+    
+    <lastmod>2019-11-11T13:53:52.680Z</lastmod>
     
   </url>
   
