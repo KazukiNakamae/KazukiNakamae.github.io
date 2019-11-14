@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-11-14T06:53:13.988Z</updated>
+  <updated>2019-11-14T15:28:01.099Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>how_to_find_sgRNA_target_sequences_using_CHOPCHOP</title>
+    <link href="https://KazukiNakamae.github.io/2019/11/15/how-to-find-sgRNA-target-sequences-using-CHOPCHOP/"/>
+    <id>https://KazukiNakamae.github.io/2019/11/15/how-to-find-sgRNA-target-sequences-using-CHOPCHOP/</id>
+    <published>2019-11-14T15:02:11.000Z</published>
+    <updated>2019-11-14T15:28:01.099Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi sir,<br>I am fine.</p><p>Today, I introduce <a href="http://www.rgenome.net/cas-analyzer/#!" title="Cas-analyzer" target="_blank" rel="noopener">CHOPCHOP</a> which is web-based search tool of CRISPR–Cas single guide RNA (sgRNA) targets.</p><p>Citation info: <a href="https://academic.oup.com/nar/article/47/W1/W171/5491735" title="CHOPCHOP v3" target="_blank" rel="noopener">Labun, Kornel, et al. “CHOPCHOP v3: expanding the CRISPR web toolbox beyond genome editing.” Nucleic acids research (2019).</a>.<br>The previou versions are:<br><a href="https://academic.oup.com/nar/article/44/W1/W272/2499370" title="CHOPCHOP v2" target="_blank" rel="noopener">Labun, Kornel, et al. “CHOPCHOP v2: a web tool for the next generation of CRISPR genome engineering.” Nucleic acids research 44.W1 (2016): W272-W276.</a>.<br><a href="https://academic.oup.com/nar/article/42/W1/W401/2437392" title="CHOPCHOP" target="_blank" rel="noopener">Montague, Tessa G., et al. “CHOPCHOP: a CRISPR/Cas9 and TALEN web tool for genome editing.” Nucleic acids research 42.W1 (2014): W401-W407.</a>.</p><p>Thanks to the updates, CHOPCHOP accommodates various sgRNA designs. In this post, I put a simple example.<br>Please watch the following video.</p><div class="video-container"><iframe src="//www.youtube.com/embed/eYki1kf_mOQ" frameborder="0" allowfullscreen></iframe></div><p>I strongly recommend choosing the specific target where MM(MisMatch)0 is 0. And also, you can choose the target with MM1=0, MM2=0, and MM3=0 as long as you can.<br>CHOPCHOP can offer primer set for further analysis by deep sequencing or a T7E1 assay, and it can predict indel frequency based on <a href="https://www.nature.com/articles/s41586-018-0686-x" title="Shen et al. 2018" target="_blank" rel="noopener">Shen et al. 2018</a>. It would be helpful for your experiment.</p><p>Thank you so much…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi sir,&lt;br&gt;I am fine.&lt;/p&gt;
+&lt;p&gt;Today, I introduce &lt;a href=&quot;http://www.rgenome.net/cas-analyzer/#!&quot; title=&quot;Cas-analyzer&quot; target=&quot;_blank&quot; rel
+      
+    
+    </summary>
+    
+    
+      <category term="NGS Analysis" scheme="https://KazukiNakamae.github.io/categories/NGS-Analysis/"/>
+    
+    
+      <category term="Bioinfomatics" scheme="https://KazukiNakamae.github.io/tags/Bioinfomatics/"/>
+    
+      <category term="CHOPCHOP" scheme="https://KazukiNakamae.github.io/tags/CHOPCHOP/"/>
+    
+  </entry>
   
   <entry>
     <title>How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment</title>
