@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-96900517-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment | n|nja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hi sir,I feel like eating satsuma due to japanese cool climate. What is traditional winter fruit in your living place? Anyway, Today, I introduce how to analyze CRISPR-Cas9 sample using CRISPResso. wh">
+<meta name="keywords" content="Bioinfomatics,Anaconda,CRISPResso">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment">
+<meta property="og:url" content="https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/index.html">
+<meta property="og:site_name" content="n|nja">
+<meta property="og:description" content="Hi sir,I feel like eating satsuma due to japanese cool climate. What is traditional winter fruit in your living place? Anyway, Today, I introduce how to analyze CRISPR-Cas9 sample using CRISPResso. wh">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_1.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_2.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_3.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_5.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_6.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_7.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_8.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_4.png">
+<meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-14_9.png">
+<meta property="og:updated_time" content="2019-11-14T06:41:22.149Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment">
+<meta name="twitter:description" content="Hi sir,I feel like eating satsuma due to japanese cool climate. What is traditional winter fruit in your living place? Anyway, Today, I introduce how to analyze CRISPR-Cas9 sample using CRISPResso. wh">
+<meta name="twitter:image" content="https://kazukinakamae.github.io/images/2019-11-14_1.png">
+<meta name="twitter:creator" content="@kazuki_nakamae">
+  
+    <link rel="alternate" href="/atom.xml" title="n|nja" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">n|nja</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Bioinfomatics &amp; Genome editing</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://KazukiNakamae.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-to-analize-CRISPR-Cas9-sample-CRISPResso" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/" class="article-date">
+  <time datetime="2019-11-11T14:05:41.000Z" itemprop="datePublished">2019-11-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NGS-Analysis/">NGS Analysis</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hi sir,<br>I feel like eating <a href="https://en.wikipedia.org/wiki/Citrus_unshiu" title="satsuma" target="_blank" rel="noopener">satsuma</a> due to japanese cool climate. What is traditional winter fruit in your living place?</p>
+<p>Anyway, Today, I introduce how to analyze CRISPR-Cas9 sample using <a href="http://github.com/lucapinello/CRISPResso" title="CRISPResso" target="_blank" rel="noopener">CRISPResso</a>. which is a user-friendly NGS analysis tool. This is specialized for analyzing genome editing data generated with CRISPR.</p>
+<p>Citation info: <a href="https://www.nature.com/articles/nbt.3583" title="CRISPResso" target="_blank" rel="noopener">Pinello, Luca, et al. “Analyzing CRISPR genome-editing experiments with CRISPResso.” Nature biotechnology 34.7 (2016): 695.</a>.</p>
+<p>I have to note that this is an old version of CRISPResso. <em>The author does not recommend to use it.</em> However, it has been used in several papers for a few years. It can be used to reproduce the data and perform the comparison.</p>
+<p>I use the published raw NGS amplicon data (DRR147084_1.fastq.gz / DRR147084_2.fastq.gz) which was downloaded in the step 4 of <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="How to map NGS data using BWA-MEM">the post</a><br>If you want to use the data, please check <a href="https://kazukinakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/" title="How to map NGS data using BWA-MEM">the post</a>.<br>This example NGS data (DRR147084) is ampilicon sequencing data generated with MiSeq. The sample is 77bp fragment MMEJ-assisted knock-in sample, which contains wildtype amplicon sequence, indel amplicon sequence, unexpected knock-in sequence (may be generated by NHEJ), and expected knock-in amplicon sequence generated by MMEJ.<br>Here are sequnece maps.</p>
+<p><img src="/images/2019-11-14_1.png" alt="Wildtype amplicon sequence" title="Wildtype amplicon sequence"><br><img src="/images/2019-11-14_2.png" alt="Zoom image of Wildtype amplicon sequence" title="Zoom image of Wildtype amplicon sequence"><br><img src="/images/2019-11-14_3.png" alt="Expected knock-in amplicon sequence" title="Expected knock-in amplicon sequence"></p>
+<p>I will show the example using it.</p>
+<h3 id="STEP1-Searching-the-region-of-“focusing-range”-using-Blat"><a href="#STEP1-Searching-the-region-of-“focusing-range”-using-Blat" class="headerlink" title="STEP1: Searching the region of “focusing_range” using Blat"></a>STEP1: Searching the region of “focusing_range” using Blat</h3><h4 id="1-Create-visual-environment"><a href="#1-Create-visual-environment" class="headerlink" title="1: Create visual environment"></a>1: Create visual environment</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name crispresso_env --channel bioconda crispresso;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Activate-visual-environment"><a href="#2-Activate-visual-environment" class="headerlink" title="2: Activate visual environment"></a>2: Activate visual environment</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> activate crispresso_env;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Run-CRSIPResso"><a href="#3-Run-CRSIPResso" class="headerlink" title="3: Run CRSIPResso"></a>3: Run CRSIPResso</h4><p>I applied the parameters used in <a href="https://www.nature.com/articles/s41467-018-05773-6" title="the original paper" target="_blank" rel="noopener">the original paper</a> to analyze the data with CRISPResso.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">crispresso \</span><br><span class="line">-r1 /Volumes/databank1/ngs/DRR147084_1.fastq.gz \</span><br><span class="line">-r2 /Volumes/databank1/ngs/DRR147084_2.fastq.gz \</span><br><span class="line">-a ttacatgatgcagaaagttgatatccctccgcttcttactctttttttttttctcccccatcatacaggtgaatatgaccatctcccagaacaggccttctatatggtgggacccattgaagaagctgtggcaaaagctgataagctggctgaagagcattcatcgtgaggggtctttgtcctctgtactgtctctctccttgcccctaacccaaaaagcttcatttttctgtgtaggctgcacaagagccttgattgaagatatattctttctgaacagtatttaaggtttccaataaaatgtacacccctcagaatttgtctgattctcttggtt \</span><br><span class="line">-g tgaagagcattcatcgtgag \</span><br><span class="line">-e ttacatgatgcagaaagttgatatccctccgcttcttactctttttttttttctcccccatcatacaggtgaatatgaccatctcccagaacaggccttctatatggtgggacccattgaagaagctgtggcaaaagctgataagctggctgaagagcattcatcgtggGGATCCGACTATAAGGACCACGACGGAGACTACAAGGATCATGATATTGATTACAAAGACGATGACGATAAGTAAgaggggtctttgtcctctgtactgtctctctccttgcccctaacccaaaaagcttcatttttctgtgtaggctgcacaagagccttgattgaagatatattctttctgaacagtatttaaggtttccaataaaatgtacacccctcagaatttgtctgattctcttggtt \</span><br><span class="line">-d ggGGATCCGACTATAAGGACCACGACGGAGACTACAAGGATCATGATATTGATTACAAAGACGATGACGATAAGTAA \</span><br><span class="line">-o /Volumes/databank1/ngs \</span><br><span class="line">--name crispresso_example1 \</span><br><span class="line">--hide_mutations_outside_window_NHEJ \</span><br><span class="line">--hdr_perfect_alignment_threshold 99.5;</span><br></pre></td></tr></table></figure>
+
+<p><code>-o</code> indicates OUTPUT_FOLDER (“/Volumes/databank1/ngs”). You can choose it freely.<br>The explanation of the other parameter is shown in <a href="https://github.com/lucapinello/CRISPResso" title="author&#39;s github" target="_blank" rel="noopener">author’s github</a></p>
+<p>The result files is saved into OUTPUT_FOLDER/“crispresso_example1” folder.</p>
+<p>The full explanation of output is described in <a href="https://www.nature.com/articles/nbt.3583" title="the author&#39;s paper" target="_blank" rel="noopener">the author’s paper</a>.<br>I pick up some results.</p>
+<p><img src="/images/2019-11-14_5.png" alt="2.Unmodified_NHEJ_HDR_pie_chart.pdf" title="2.Unmodified_NHEJ_HDR_pie_chart.pdf"><br>My understanding is that “Unmodified”, “NHEJ”, “Mixed HDR-NHEJ”, and “HDR” are wildtype amplicon sequence, indel amplicon sequence, unexpected knock-in sequence (may be generated by NHEJ), and expected knock-in amplicon sequence generated by MMEJ.</p>
+<p><img src="/images/2019-11-14_6.png" alt="9.Alleles_around_cut_site_for_&lt;guide&gt;.pdf" title="9.Alleles_around_cut_site_for_&lt;guide&gt;.pdf"></p>
+<p><img src="/images/2019-11-14_7.png" alt="Quantification_of_editing_frequency.txt" title="Quantification_of_editing_frequency.txt"></p>
+<p>You can see the list of reads using Excel.<br><img src="/images/2019-11-14_8.png" alt="Alleles_frequency_table.txt" title="Alleles_frequency_table.txt"></p>
+<h4 id="Supplementary-Run-CRSIPResso-with-TruSeq3-PE-fa"><a href="#Supplementary-Run-CRSIPResso-with-TruSeq3-PE-fa" class="headerlink" title="(Supplementary): Run CRSIPResso with TruSeq3-PE.fa"></a>(Supplementary): Run CRSIPResso with TruSeq3-PE.fa</h4><p>CRISPResso contains Trimmomatic to adapter trimming and quality filtering.<br>As I mentioned in <a href="https://kazukinakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/" title="tha past post">tha past post</a>, <a href="https://github.com/timflutre/trimmomatic/blob/master/adapters/TruSeq3-PE.fa" title="TruSeq3-PE.fa" target="_blank" rel="noopener">TruSeq3-PE.fa</a> is used in the MiSeq machine which performed sequencing the example data. Trimmomatic privides it.</p>
+<p>I typed the previous CRISPResso command with the TruSeq3-PE.fa to get results with a more correct way.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">crispresso \</span><br><span class="line">-r1 /Volumes/databank1/ngs/DRR147084_1.fastq.gz \</span><br><span class="line">-r2 /Volumes/databank1/ngs/DRR147084_2.fastq.gz \</span><br><span class="line">-a ttacatgatgcagaaagttgatatccctccgcttcttactctttttttttttctcccccatcatacaggtgaatatgaccatctcccagaacaggccttctatatggtgggacccattgaagaagctgtggcaaaagctgataagctggctgaagagcattcatcgtgaggggtctttgtcctctgtactgtctctctccttgcccctaacccaaaaagcttcatttttctgtgtaggctgcacaagagccttgattgaagatatattctttctgaacagtatttaaggtttccaataaaatgtacacccctcagaatttgtctgattctcttggtt \</span><br><span class="line">-g tgaagagcattcatcgtgag \</span><br><span class="line">-e ttacatgatgcagaaagttgatatccctccgcttcttactctttttttttttctcccccatcatacaggtgaatatgaccatctcccagaacaggccttctatatggtgggacccattgaagaagctgtggcaaaagctgataagctggctgaagagcattcatcgtggGGATCCGACTATAAGGACCACGACGGAGACTACAAGGATCATGATATTGATTACAAAGACGATGACGATAAGTAAgaggggtctttgtcctctgtactgtctctctccttgcccctaacccaaaaagcttcatttttctgtgtaggctgcacaagagccttgattgaagatatattctttctgaacagtatttaaggtttccaataaaatgtacacccctcagaatttgtctgattctcttggtt \</span><br><span class="line">-d ggGGATCCGACTATAAGGACCACGACGGAGACTACAAGGATCATGATATTGATTACAAAGACGATGACGATAAGTAA \</span><br><span class="line">-o /Volumes/databank1/ngs \</span><br><span class="line">--name crispresso_example2 \</span><br><span class="line">--hide_mutations_outside_window_NHEJ \</span><br><span class="line">--hdr_perfect_alignment_threshold 99.5 \</span><br><span class="line">--trim_sequences \</span><br><span class="line">--trimmomatic_options_string <span class="string">" ILLUMINACLIP:/Volumes/databank1/ngs/trimmomatic/adapters/TruSeq3-PE.fa:0:90:10:0:true MINLEN:40"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>You have to remenber adding “:2:30:10 MINLEN:36” to the end of adapter sequence file path. The explanetion of “:2:30:10 MINLEN:36” is shown in <a href="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf" title="the Trimmomatic manual" target="_blank" rel="noopener">the Trimmomatic manual</a>. If you understand what it says, you can adjust the value.</p>
+<p>The dropped sequence was only 5 reads.<br><img src="/images/2019-11-14_4.png" alt="Trimmomatic log in CRISPResso_RUNNING_LOG.txt" title="Trimmomatic log in CRISPResso_RUNNING_LOG.txt"></p>
+<p><img src="/images/2019-11-14_9.png" alt="2.Unmodified_NHEJ_HDR_pie_chart.png" title="2.Unmodified_NHEJ_HDR_pie_chart.png"></p>
+<p>The classification result was almost same. In some published reports, The trimming was not practiced in CRISPResso. However, the impact might be not large (I do NOT mean that it is not necessary to trim adapters…).</p>
+<p>Thank you so much…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/" data-id="ck2ycir2600010mv1wtuvz8cm" class="article-share-link">Share</a>
+      
+        <a href="https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CRISPResso/">CRISPResso</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+  <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Installation/">Installation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/NGS-Analysis/">NGS Analysis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BWA-MEM/">BWA-MEM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bioinfomatics/">Bioinfomatics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CRISPResso/">CRISPResso</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cas-Analyzer/">Cas-Analyzer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CrispRVariants/">CrispRVariants</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FLASh/">FLASh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RStudio/">RStudio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SRA/">SRA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sickle/">Sickle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trimmomatic/">Trimmomatic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/report/">report</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Anaconda/" style="font-size: 16.67px;">Anaconda</a> <a href="/tags/BWA-MEM/" style="font-size: 10px;">BWA-MEM</a> <a href="/tags/Bioinfomatics/" style="font-size: 20px;">Bioinfomatics</a> <a href="/tags/CRISPResso/" style="font-size: 10px;">CRISPResso</a> <a href="/tags/Cas-Analyzer/" style="font-size: 10px;">Cas-Analyzer</a> <a href="/tags/CrispRVariants/" style="font-size: 10px;">CrispRVariants</a> <a href="/tags/FLASh/" style="font-size: 10px;">FLASh</a> <a href="/tags/RStudio/" style="font-size: 10px;">RStudio</a> <a href="/tags/SRA/" style="font-size: 13.33px;">SRA</a> <a href="/tags/Sickle/" style="font-size: 10px;">Sickle</a> <a href="/tags/Trimmomatic/" style="font-size: 10px;">Trimmomatic</a> <a href="/tags/report/" style="font-size: 10px;">report</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/">How to analyze CRISPR-Cas9 sample using CRISPResso in Anaconda environment</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/">How to analyze CRISPR-Cas9 NGS sample using Cas-Analyzer</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/07/how-to-map-CRISPR-Cas9-sample-CrispRVariants/">How to analyze CRISPR-Cas9 sample using CrispRVariants</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/28/How-to-trim-adapters-using-Trimmomatic/">How to trim adapters using Trimmomatic</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/27/How-to-map-NGS-data-using-BWAMEM/">How to map NGS data using BWA-MEM</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+
+    
+      <script type="text/javascript">
+          var disqus_shortname = 'kazukinakamae-com';
+          var disqus_config = function () {
+              this.page.url = 'https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
+              this.page.identifier = '/2019/10/27/How-to-map-NGS-data-using-BWAMEM/';
+              this.language = 'en';
+          };
+          (function(){
+              var dsq = document.createElement('script');
+              dsq.type = 'text/javascript';
+              dsq.async = true;
+              dsq.src =  '//a.disquscdn.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          }());
+      </script>
+    
+
+    <div id="footer-info" class="inner">
+      &copy; 2019 Kazuki Nakamae<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'kazukinakamae-com';
+  
+  var disqus_url = 'https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
