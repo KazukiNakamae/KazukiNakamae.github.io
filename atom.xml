@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-11-16T07:50:51.774Z</updated>
+  <updated>2019-11-16T07:53:26.731Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://KazukiNakamae.github.io/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/"/>
     <id>https://KazukiNakamae.github.io/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/</id>
     <published>2019-11-16T07:20:50.000Z</published>
-    <updated>2019-11-16T07:50:51.774Z</updated>
+    <updated>2019-11-16T07:53:26.731Z</updated>
     
-    <content type="html"><![CDATA[<p>Hi sir,<br>How is the weekend?</p><p>Today, I introduce <a href="https://crispr.dbcls.jp" title="CRISPRdirect" target="_blank" rel="noopener">CRISPRdirect</a> which is a quite fast search tool of sgRNA. Now, CRISPRdirect supports many (&gt;200) species. If you design sgRNA in organisms that are not a model organism, this tool would be helpful.</p><p>Citation info: <a href="https://academic.oup.com/bioinformatics/article/31/7/1120/180346" title="CRISPRdirect" target="_blank" rel="noopener">Naito, Yuki, et al. “CRISPRdirect: software for designing CRISPR/Cas guide RNA with reduced off-target sites.” Bioinformatics 31.7 (2014): 1120-1123.</a>.</p><p>An introduction video of CRISPRdirect has been uploaded on YouTude. Please check it.<br><a href="https://www.youtube.com/watch?v=OGdBU29v3jY" title="the introduction video" target="_blank" rel="noopener">“CRISPRdirect: designing CRISPR/Cas guide RNA sequence” on YouTude</a></p><p>You can see <a href="https://gggenome.dbcls.jp" title="GGGenome" target="_blank" rel="noopener">GGGenome</a> also. This is a very fast DNA search tool in the &gt;200 species as well as CRISPRdirect. This system shows the specificity of the target sequence including mismatch sequences. In my opinion, this is useful for designing primers.</p><p>The introduction video<br><a href="https://www.youtube.com/watch?v=IZgGA94ooic" title="GGGenome: a fast and simple DNA sequence search engine" target="_blank" rel="noopener">“GGGenome: a fast and simple DNA sequence search engine” on YouTude</a></p><p>Thank you so much…</p>]]></content>
+    <content type="html"><![CDATA[<p>Hi sir,<br>How is the weekend?</p><p>Today, I introduce <a href="https://crispr.dbcls.jp" title="CRISPRdirect" target="_blank" rel="noopener">CRISPRdirect</a> which is a quite fast search tool of sgRNA. Now, CRISPRdirect supports many (&gt;200) species. If you design sgRNA in organisms that are not a model organism, this tool would be helpful.</p><p>Citation info: <a href="https://academic.oup.com/bioinformatics/article/31/7/1120/180346" title="CRISPRdirect" target="_blank" rel="noopener">Naito, Yuki, et al. “CRISPRdirect: software for designing CRISPR/Cas guide RNA with reduced off-target sites.” Bioinformatics 31.7 (2014): 1120-1123.</a>.</p><p>An introduction video of CRISPRdirect has been uploaded by the author group on YouTude . Please check it.<br><a href="https://www.youtube.com/watch?v=OGdBU29v3jY" title="the introduction video" target="_blank" rel="noopener">“CRISPRdirect: designing CRISPR/Cas guide RNA sequence” on YouTude</a></p><p>You can see <a href="https://gggenome.dbcls.jp" title="GGGenome" target="_blank" rel="noopener">GGGenome</a> also. This is a very fast DNA search tool in the &gt;200 species as well as CRISPRdirect. This system shows the specificity of the target sequence including mismatch sequences. In my opinion, this is useful for designing primers.</p><p>The introduction video by the author group<br><a href="https://www.youtube.com/watch?v=IZgGA94ooic" title="GGGenome: a fast and simple DNA sequence search engine" target="_blank" rel="noopener">“GGGenome: a fast and simple DNA sequence search engine” on YouTude</a></p><p>Thank you so much…</p>]]></content>
     
     <summary type="html">
     
