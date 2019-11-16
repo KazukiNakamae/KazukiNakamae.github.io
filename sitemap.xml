@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/</loc>
+    <loc>https://KazukiNakamae.github.io/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/</loc>
     
-    <lastmod>2019-11-14T18:39:52.389Z</lastmod>
+    <lastmod>2019-11-16T07:36:30.232Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/15/how-to-find-sgRNA-target-sequences-using-CHOPCHOP/</loc>
     
-    <lastmod>2019-11-14T16:06:54.231Z</lastmod>
+    <lastmod>2019-11-16T07:26:00.155Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/</loc>
+    
+    <lastmod>2019-11-14T18:39:52.389Z</lastmod>
     
   </url>
   
