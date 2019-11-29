@@ -32,7 +32,7 @@ ga('send', 'pageview');
 <meta property="og:image" content="https://kazukinakamae.github.io/images/2019-10-27_1.png">
 <meta property="og:image" content="https://kazukinakamae.github.io/images/2019-10-27_2.png">
 <meta property="og:image" content="https://kazukinakamae.github.io/images/2019-11-6_4.png">
-<meta property="og:updated_time" content="2019-11-06T18:42:18.931Z">
+<meta property="og:updated_time" content="2019-11-29T06:38:34.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to map NGS data using BWA-MEM">
 <meta name="twitter:description" content="Hi sir,It is definetly autumn. I recommend to visit Miyajima and try “Momiji Manju”. Today, I introduce how to map NGS data using BWA-MEM. BWAMEM aligner is one of the most famous tools in NGS analysi">
@@ -137,7 +137,7 @@ ga('send', 'pageview');
 <h4 id="5-Wait-for-a-minute-until-you-can-type-a-command-in-your-terminal-again"><a href="#5-Wait-for-a-minute-until-you-can-type-a-command-in-your-terminal-again" class="headerlink" title="5: Wait for a minute until you can type a command in your terminal again"></a>5: Wait for a minute until you can type a command in your terminal again</h4><p>*You can kill time by reading <a href="https://www.nature.com/articles/s41467-018-05773-6" title="paper" target="_blank" rel="noopener">this paper</a> which is the original report using the downloading deep sequencing data.</p>
 <h4 id="6-Filter-the-raw-NGS-files-using-sickle"><a href="#6-Filter-the-raw-NGS-files-using-sickle" class="headerlink" title="6: Filter the raw NGS files using sickle"></a>6: Filter the raw NGS files using sickle</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sickle pe -f /Volumes/databank1/ngs/DRR147084_1.fastq.gz -r /Volumes/databank1/ngs/DRR147084_2.fastq.gz -t sanger \</span><br><span class="line">-o /Volumes/databank1/ngs/qfltr_DRR147084_1.fastq -p /Volumes/databank1/ngs/qfltr_DRR147084_2.fastq \</span><br><span class="line">-s /Volumes/databank1/ngs/single_DRR147084.fastq; <span class="comment"># Trim average quality &lt;\Q20 and read length &lt; 20bp</span></span><br></pre></td></tr></table></figure>
 
-<p>*<code>qfltr_DRR147084_1.fastq</code>, <code>qfltr_DRR147084_2.fastq</code>, <code>single_DRR147084.fastq</code> are my choice. You can name it freely.<br>*Do you want to trim adapters before that? You are such a nice guy!!! You can check <a href="https://kazukinakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/" title="How to trim adapters using Trimmomatic">the article</a>.</p>
+<p>*<code>qfltr_DRR147084_1.fastq</code>, <code>qfltr_DRR147084_2.fastq</code>, <code>single_DRR147084.fastq</code> are my choice. You can name it freely.<br>*Do you want to trim adapters before that? You can check <a href="https://kazukinakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/" title="How to trim adapters using Trimmomatic">the article</a>.</p>
 <h4 id="7-Merge-paired-end-reads-using-FLASh"><a href="#7-Merge-paired-end-reads-using-FLASh" class="headerlink" title="7: Merge paired-end reads using FLASh"></a>7: Merge paired-end reads using FLASh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes/databank1/ngs/;flash /Volumes/databank1/ngs/qfltr_DRR147084_1.fastq /Volumes/databank1/ngs/qfltr_DRR147084_2.fastq;<span class="built_in">cd</span> ~/Desktop;</span><br></pre></td></tr></table></figure>
 
 <p>The merged file “out.extendedFrags.fastq” is saved into <code>/Volumes/databank1/ngs/</code> when the process is done.</p>
@@ -152,7 +152,7 @@ ga('send', 'pageview');
 
 <h4 id="12-Generate-the-fasta-file-index-of-hg38"><a href="#12-Generate-the-fasta-file-index-of-hg38" class="headerlink" title="12: Generate the fasta file index of hg38"></a>12: Generate the fasta file index of hg38</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bwa index -p /Volumes/databank1/ngs/hg38 /Volumes/databank1/ngs/hg38.fa;</span><br></pre></td></tr></table></figure>
 
-<h4 id="13-Wait-for-about-20-30-minutes-until-you-can-type-a-command-in-your-terminal-again"><a href="#13-Wait-for-about-20-30-minutes-until-you-can-type-a-command-in-your-terminal-again" class="headerlink" title="13: Wait for about 20-30 minutes until you can type a command in your terminal again"></a>13: Wait for about 20-30 minutes until you can type a command in your terminal again</h4><p>You can take a nap and browse the shops. I like a squid jerky of 7-Eleven…</p>
+<h4 id="13-Wait-for-about-20-30-minutes-until-you-can-type-a-command-in-your-terminal-again"><a href="#13-Wait-for-about-20-30-minutes-until-you-can-type-a-command-in-your-terminal-again" class="headerlink" title="13: Wait for about 20-30 minutes until you can type a command in your terminal again"></a>13: Wait for about 20-30 minutes until you can type a command in your terminal again</h4><p>It is a long time. You can take a nap and browse the shops.</p>
 <h3 id="STEP4-Mapping-the-merged-FASTQ-file-using-human-reference-genome-hg38"><a href="#STEP4-Mapping-the-merged-FASTQ-file-using-human-reference-genome-hg38" class="headerlink" title="STEP4: Mapping the merged FASTQ file using human reference genome (hg38)"></a>STEP4: Mapping the merged FASTQ file using human reference genome (hg38)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bwa mem -t 1 /Volumes/databank1/ngs/hg38 /Volumes/databank1/ngs/out.extendedFrags.fastq | samtools sort -o /Volumes/databank1/ngs/out.extendedFrags.fastq.bam;</span><br></pre></td></tr></table></figure>
 
 <p>*<code>/Volumes/databank1/ngs/hg38</code> indicates the name of the reference index.</p>
@@ -317,8 +317,8 @@ ga('send', 'pageview');
       <script type="text/javascript">
           var disqus_shortname = 'kazukinakamae-com';
           var disqus_config = function () {
-              this.page.url = 'https://KazukiNakamae.github.io/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/';
-              this.page.identifier = '/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/';
+              this.page.url = 'https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/';
+              this.page.identifier = '/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/';
               this.language = 'en';
           };
           (function(){
