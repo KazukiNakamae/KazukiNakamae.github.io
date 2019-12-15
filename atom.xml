@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-12-15T10:14:07.730Z</updated>
+  <updated>2019-12-15T10:15:07.214Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://KazukiNakamae.github.io/2019/12/15/how-to-obtain-gene-information-of-hg19-from-NCBI/"/>
     <id>https://KazukiNakamae.github.io/2019/12/15/how-to-obtain-gene-information-of-hg19-from-NCBI/</id>
     <published>2019-12-15T09:41:15.000Z</published>
-    <updated>2019-12-15T10:14:07.730Z</updated>
+    <updated>2019-12-15T10:15:07.214Z</updated>
     
-    <content type="html"><![CDATA[<p>Hi sir,<br>I am Kazuki Nakamae from Japan.</p><p>In genome analysis, software sometimes requires gene information of hg19. What is hg19? You can see the explain in <a href="https://www.biostars.org/p/17107/" title="Bioster" target="_blank" rel="noopener">the link</a></p><p>I introcuce how to obtain a gene infromation of hg19 using NCBI database.<br>Please watch the following video.</p><div class="video-container"><iframe src="//www.youtube.com/embed/v=2_IvhTYNFLY" frameborder="0" allowfullscreen></iframe></div><p>In this video, I obtained the Human VEGFA information of hg19. I chose “GRCh37.p13 Primary Assembly” at 1:00 of the video. It is important because GRCh37.p13 Primary Assembly is almost equal to hg19. You can see <a href="https://www.biostars.org/p/123767/" title="Bioster" target="_blank" rel="noopener">the link</a>.</p><p>Thank you so much…</p>]]></content>
+    <content type="html"><![CDATA[<p>Hi sir,<br>I am Kazuki Nakamae from Japan.</p><p>In genome analysis, software sometimes requires gene information of hg19. What is hg19? You can see the explain in <a href="https://www.biostars.org/p/17107/" title="Bioster" target="_blank" rel="noopener">the link</a></p><p>I introcuce how to obtain a gene infromation of hg19 using NCBI database.<br>Please watch the following video.</p><div class="video-container"><iframe src="//www.youtube.com/embed/?v=2_IvhTYNFLY" frameborder="0" allowfullscreen></iframe></div><p>In this video, I obtained the Human VEGFA information of hg19. I chose “GRCh37.p13 Primary Assembly” at 1:00 of the video. It is important because GRCh37.p13 Primary Assembly is almost equal to hg19. You can see <a href="https://www.biostars.org/p/123767/" title="Bioster" target="_blank" rel="noopener">the link</a>.</p><p>Thank you so much…</p>]]></content>
     
     <summary type="html">
     
