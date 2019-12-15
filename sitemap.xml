@@ -2,58 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/</loc>
+    <loc>https://KazukiNakamae.github.io/2019/12/15/how-to-obtain-gene-information-of-hg19-from-NCBI/</loc>
     
-    <lastmod>2019-11-29T06:39:53.652Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/</loc>
-    
-    <lastmod>2019-11-29T06:38:34.682Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/</loc>
-    
-    <lastmod>2019-11-29T06:33:55.518Z</lastmod>
+    <lastmod>2019-12-15T10:07:33.644Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/10/26/How-to-install-Anaconda/</loc>
     
-    <lastmod>2019-11-29T06:32:50.380Z</lastmod>
+    <lastmod>2019-12-15T09:45:45.291Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/16/how-to-find-sgRNA-target-sequences-using-CRISPRdirect/</loc>
     
-    <lastmod>2019-11-16T07:59:31.757Z</lastmod>
+    <lastmod>2019-12-15T09:45:35.942Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/15/how-to-find-sgRNA-target-sequences-using-CHOPCHOP/</loc>
     
-    <lastmod>2019-11-16T07:26:00.155Z</lastmod>
+    <lastmod>2019-12-15T09:45:29.295Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/07/how-to-analyze-CRISPR-Cas9-sample-CasAnalyzer/</loc>
     
-    <lastmod>2019-11-11T15:02:46.517Z</lastmod>
+    <lastmod>2019-12-15T09:45:21.838Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://KazukiNakamae.github.io/2019/11/11/how-to-analize-CRISPR-Cas9-sample-CRISPResso/</loc>
+    
+    <lastmod>2019-12-15T09:45:14.666Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://KazukiNakamae.github.io/2019/10/28/How-to-trim-adapters-using-Trimmomatic/</loc>
+    
+    <lastmod>2019-12-15T09:45:01.104Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://KazukiNakamae.github.io/2019/10/27/How-to-map-NGS-data-using-BWAMEM/</loc>
+    
+    <lastmod>2019-12-15T09:44:44.482Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://KazukiNakamae.github.io/2019/11/07/how-to-map-CRISPR-Cas9-sample-CrispRVariants/</loc>
     
-    <lastmod>2019-11-11T15:01:08.837Z</lastmod>
+    <lastmod>2019-12-15T09:44:27.435Z</lastmod>
     
   </url>
   
