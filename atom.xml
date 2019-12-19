@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-12-15T10:17:07.414Z</updated>
+  <updated>2019-12-19T17:48:59.253Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to find sgRNA target sequences using CRISPOR</title>
+    <link href="https://KazukiNakamae.github.io/2019/12/20/how-to-find-sgRNA-target-sequences-using-CRISPOR/"/>
+    <id>https://KazukiNakamae.github.io/2019/12/20/how-to-find-sgRNA-target-sequences-using-CRISPOR/</id>
+    <published>2019-12-19T17:00:31.000Z</published>
+    <updated>2019-12-19T17:48:59.253Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hi sir,<br>What are you planning in the winter vacation?</p><p>Today, I introduce <a href="http://crispor.tefor.net" title="CRISPOR" target="_blank" rel="noopener">CRISPOR</a> that accommodates on/off-target scoring algorithms. And also CRISPOR can provide protocols, primer sequences, information of off-target sites, and analysis commands of CRISPResso, which meet sgRNA you chose.</p><p>Citation info: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1012-2" title="CRISPOR" target="_blank" rel="noopener">Haeussler, Maximilian, et al. “Evaluation of off-target and on-target scoring algorithms and integration into the guide RNA selection tool CRISPOR.” Genome biology 17.1 (2016): 148.</a>.</p><p>I uploaded the video. You can check it.</p><div class="video-container"><iframe src="//www.youtube.com/embed/PQj3P9G-Ma8" frameborder="0" allowfullscreen></iframe></div><p>I usually enter the sequence name because an error occurs unless I enter it.<br>In this video, I used VEGFA sequence of hg19. If you want to know how to get the information, you can check <a href="https://kazukinakamae.github.io/2019/12/15/how-to-obtain-gene-information-of-hg19-from-NCBI/" title="the previous article">the previous article</a>.</p><p>Thank you so much…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hi sir,&lt;br&gt;What are you planning in the winter vacation?&lt;/p&gt;
+&lt;p&gt;Today, I introduce &lt;a href=&quot;http://crispor.tefor.net&quot; title=&quot;CRISPOR&quot; tar
+      
+    
+    </summary>
+    
+    
+      <category term="sgRNA design" scheme="https://KazukiNakamae.github.io/categories/sgRNA-design/"/>
+    
+    
+      <category term="Bioinformatics" scheme="https://KazukiNakamae.github.io/tags/Bioinformatics/"/>
+    
+      <category term="CRISPOR" scheme="https://KazukiNakamae.github.io/tags/CRISPOR/"/>
+    
+  </entry>
   
   <entry>
     <title>How to obtain gene information of hg19 from NCBI</title>
