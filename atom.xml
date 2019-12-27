@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-12-27T06:54:39.868Z</updated>
+  <updated>2019-12-27T07:01:41.607Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>How to design knockin donor using GTagHD</title>
+    <title>How to design knock-in donor using GTagHD</title>
     <link href="https://KazukiNakamae.github.io/2019/12/27/how-to-design-knockin-donor-using-GtagHD/"/>
     <id>https://KazukiNakamae.github.io/2019/12/27/how-to-design-knockin-donor-using-GtagHD/</id>
     <published>2019-12-27T06:32:49.000Z</published>
-    <updated>2019-12-27T06:54:39.868Z</updated>
+    <updated>2019-12-27T07:01:41.607Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/front_image_1.png" alt="Writer: Kazuki Nakamae" title="Thumbnail"></p><p>Hi sir,<br>How are you?</p><p>Today, I introduce <a href="http://www.genesculpt.org/gtaghd/" title="GTagHD" target="_blank" rel="noopener">GTagHD</a> that helps knock-in design using short homology arms. This software can design knock-in donor without genomic sequence information.</p><p>Citation info: <a href="https://www.biorxiv.org/content/10.1101/431627v2.abstract" title="GTagHD" target="_blank" rel="noopener">Wierson, Wesley A., et al. “GeneWeld: a method for efficient targeted integration directed by short homology.” bioRxiv (2018): 431627.</a>.<br><strong>Note: I am NOT the author, just the user.</strong></p><p>I uploaded the video. You can check it.</p><div class="video-container"><iframe src="//www.youtube.com/embed/Yb3k2vPlVtY" frameborder="0" allowfullscreen></iframe></div><p>When you use it, the UCSC genome browser is helpful, because it can provide potential sgRNAs and RefSeq Gene ID of targeting gene. In this example, I design the knock-in donor sequence for VEGFA.</p><p>Thank you so much…</p>]]></content>
     
