@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://KazukiNakamae.github.io/"/>
-  <updated>2019-12-27T07:05:40.768Z</updated>
+  <updated>2020-01-13T14:58:11.850Z</updated>
   <id>https://KazukiNakamae.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to predict microhomology using Microhomology-Predictor</title>
+    <link href="https://KazukiNakamae.github.io/2020/01/13/how-to-predict-mm-using-microhomology-predictor/"/>
+    <id>https://KazukiNakamae.github.io/2020/01/13/how-to-predict-mm-using-microhomology-predictor/</id>
+    <published>2020-01-13T14:13:20.000Z</published>
+    <updated>2020-01-13T14:58:11.850Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/front_image_1.png" alt="Writer: Kazuki Nakamae" title="Thumbnail"></p><p>Hi sir,<br>Happy New Year!</p><p>Today, I introduce <a href="http://www.rgenome.net/mich-calculator/" title="Microhomology-Predictor" target="_blank" rel="noopener">Microhomology-Predictor</a> that predict microhomology site used for MMEJ, which estimate MMEJ-based deletion pattrns and frequency of frame-shift.</p><p>Citation info: <a href="https://www.nature.com/articles/nmeth.3015" title="Microhomology-Predictor" target="_blank" rel="noopener">Bae, Sangsu, et al. “Microhomology-based choice of Cas9 nuclease target sites.” Nature methods 11.7 (2014): 705.</a>.<br><strong>Note: I am NOT the author, just the user.</strong></p><p>I uploaded the video. You can check it.</p><div class="video-container"><iframe src="//www.youtube.com/embed/tep6Wt6mW98" frameborder="0" allowfullscreen></iframe></div><p>Microhomology-Predictor resovgnizes the center of the entered sequence as cut site by RGEN (e.g. CRISPR-Cas9). And, the PAM-proximal region was right half-site in this example.</p><p>The result contains Microhomology Score and Out-of-frame Score. If these score are high, the frequencies of MMEJ and frame-shift are expected to become high.<br>If you want to get frame-shift mutation, a target where the Out-of-frame Score is &gt;66 is better for that.</p><p>When you click the target, the predicted pattrns, including microhomology sequence and deletion length,will be shown.</p><p>Thank you so much…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/front_image_1.png&quot; alt=&quot;Writer: Kazuki Nakamae&quot; title=&quot;Thumbnail&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hi sir,&lt;br&gt;Happy New Year!&lt;/p&gt;
+&lt;p&gt;Today, I in
+      
+    
+    </summary>
+    
+    
+      <category term="indel prediction" scheme="https://KazukiNakamae.github.io/categories/indel-prediction/"/>
+    
+    
+      <category term="Bioinformatics" scheme="https://KazukiNakamae.github.io/tags/Bioinformatics/"/>
+    
+      <category term="Microhomology-Predictor" scheme="https://KazukiNakamae.github.io/tags/Microhomology-Predictor/"/>
+    
+  </entry>
   
   <entry>
     <title>How to design knock-in donor using GTagHD</title>
